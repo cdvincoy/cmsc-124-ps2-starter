@@ -58,8 +58,25 @@ clean_scores_vector <- function(scores) {
 # names attached. Accumulating into a fresh vector with out <- c(out, value)
 # drops them, and the check compares with identical(), which notices.
 clean_scores_scalar <- function(scores) {
-    stop("TODO: implement clean_scores_scalar()")
+    out <- setNames(as.double(scores), names(scores))      # Create a double vector while preserving the original names
+    
+    if (length(out)>0){                                    # Skip the loop if the vector is empty
+         for (i in 1:length(out)){                         
+           
+            if (is.na(out[[i]])){                          # Replace missing score with 0
+                out[[i]] <- 0                              
+            } else {
+                out[[i]] <- out[[i]]*2                     # Double the score
+                
+                if (out[[i]]>20){                          # Cap the score at 20
+                    out[[i]] <- 20
+                }
+            }
+        }
+    }
+    out
 }
+# stop("TODO: implement clean_scores_scalar()")
 
 # build_roster(student_names, groups, scores)
 #
