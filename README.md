@@ -8,7 +8,7 @@ Problem Set 2. The assignment manual defines the work and the submission rules.
 ## Pair
 
 - Edriellen Mey G. Cambel (`@ed-cambel`)
--
+- Claire Dane D. Vincoy (`@cdvincoy`)
 
 ## Layout
 
