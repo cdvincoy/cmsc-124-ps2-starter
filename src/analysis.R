@@ -29,8 +29,12 @@
 # <-, replaces exactly the elements it marks and leaves the names attached. That
 # is the subassignment the constraint is asking for.
 clean_scores_vector <- function(scores) {
-    stop("TODO: implement clean_scores_vector()")
+    scores[is.na(scores)] <- 0          # Replace missing values with 0
+    scores <- scores*2                  # Double every score
+    scores[scores>20] <- 20             # Cap scores at 20
+    scores                              # Return the transformed vector
 }
+# stop("TODO: implement clean_scores_vector()")
 
 # clean_scores_scalar(scores)
 #
