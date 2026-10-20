@@ -34,6 +34,8 @@ The negative index in excludes that position, so [-2L] drops the second element,
 
 `levels = c("low", "high")` sets the category order, so `low` is code `1` and `high` is code `2`, and each element is replaced by the position of its label in that order. A factor stores integer codes plus level labels, so the type is integer. The value is [1,2,1] with length 3 and no dimensions.
 
+Correction: I predicted the length to be 2, which counts the number of elements in `levels`. But, the length should count the number of elements of the input vector passed to `factor`, which is a length 3. I also predicted `levels=[high,low]` when it should be the opposite, `levels=[low,high]`.
+
 ## P08
 
 A list keeps each component's own type, so no coercion happens. The two components are `scores` with the integer vector `3` and `5`, and `label`, the `string "A"` with value of [[3,5],"A"]. The type is list with length 2, which counts components rather than the individual values inside them, and there are no dimensions.
@@ -60,7 +62,7 @@ The expressions are grouped in a block using braces and evaluated from top to bo
 
 ## P14
 
-The expressions are grouped in a block using braces and evaluated from top to bottom. The ifelse(test, yes, no) function replaces the missing value with 0 and multiplies the other values by 2 and conditional indexing then replaces values greater than 15 with 15. The resulting vector is [14,0,15,8] with type double, a length of four and no dimensions. 
+The expressions are grouped in a block using braces and evaluated from top to bottom. The ifelse(test, yes, no) function replaces the missing value with 0 and multiplies the other values by 2 and conditional indexing then replaces values greater than 15 with 15. The resulting vector is [14,0,15,8] with type double, a length of four and no dimensions.
 
 ## P15
 

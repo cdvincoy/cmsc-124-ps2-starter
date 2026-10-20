@@ -1,8 +1,14 @@
 <!--no-pdf-->
+
 # CMSC 124 Problem Set 2 Starter
 
 This repository contains the R prediction corpus and the four functions for
 Problem Set 2. The assignment manual defines the work and the submission rules.
+
+## Pair
+
+- Edriellen Mey G. Cambel (`@ed-cambel`)
+-
 
 ## Layout
 
@@ -49,14 +55,14 @@ placeholder text and stays within the 300 to 450 word range.
 The manual carries the rules the 16 cases grade. It doesn't teach R from
 nothing, so these two go with it and are meant to be read while you work.
 
-*An Introduction to R*, the official guide from the R Core Team, documents the
+_An Introduction to R_, the official guide from the R Core Team, documents the
 same R 4.6.1 this repository's workflow runs and uses no packages:
 
 ```text
 https://cran.r-project.org/doc/manuals/R-intro.html
 ```
 
-*Advanced R* by Hadley Wickham, chapter 3, "Vectors," covers coercion,
+_Advanced R_ by Hadley Wickham, chapter 3, "Vectors," covers coercion,
 attributes, factors, lists, and data frames in this problem set's vocabulary.
 Skip its tibble material, since nothing here uses one:
 
@@ -64,7 +70,7 @@ Skip its tibble material, since nothing here uses one:
 https://adv-r.hadley.nz/vectors-chap.html
 ```
 
-Watch the vocabulary in the official guide. It talks about an object's *mode*
+Watch the vocabulary in the official guide. It talks about an object's _mode_
 and never mentions `typeof()`, and the two disagree:
 
 ```r
@@ -101,23 +107,23 @@ pad a cell to line the columns up in your editor.
 
 The course contract.
 
-| Code | Command | Meaning |
-|---|---|---|
-| 0 | `./check.sh` | all 76 checks passed |
-| 1 | `./check.sh` | at least one check failed |
-| 0 | `./lint` | `predictions.tsv` is well formed and complete |
-| 1 | `./lint` | the table is malformed or still holds a TODO |
-| 0 | `./run <case>` | the case was found and printed |
-| 64 | `./run <case>` | called with the wrong number of arguments |
-| 65 | `./run <case>` | the case id is unknown |
+| Code | Command        | Meaning                                       |
+| ---- | -------------- | --------------------------------------------- |
+| 0    | `./check.sh`   | all 76 checks passed                          |
+| 1    | `./check.sh`   | at least one check failed                     |
+| 0    | `./lint`       | `predictions.tsv` is well formed and complete |
+| 1    | `./lint`       | the table is malformed or still holds a TODO  |
+| 0    | `./run <case>` | the case was found and printed                |
+| 64   | `./run <case>` | called with the wrong number of arguments     |
+| 65   | `./run <case>` | the case id is unknown                        |
 
 ## Tested Toolchains
 
 Every row below is a run that happened.
 
-| Environment | Versions | Result |
-|---|---|---|
-| Windows 11 | R 4.6.1 | `1/76` on the starter, `76/76` with the instructor solution |
-| GitHub Actions, `ubuntu-latest` | R 4.6.1 through `r-lib/actions/setup-r` | `1/76` on the starter, matching the local run |
-| GitHub Actions, `macos-latest` | the same workflow | `1/76` on the starter |
-| GitHub Actions, `windows-latest` | the same workflow | `1/76` on the starter |
+| Environment                      | Versions                                | Result                                                      |
+| -------------------------------- | --------------------------------------- | ----------------------------------------------------------- |
+| Windows 11                       | R 4.6.1                                 | `1/76` on the starter, `76/76` with the instructor solution |
+| GitHub Actions, `ubuntu-latest`  | R 4.6.1 through `r-lib/actions/setup-r` | `1/76` on the starter, matching the local run               |
+| GitHub Actions, `macos-latest`   | the same workflow                       | `1/76` on the starter                                       |
+| GitHub Actions, `windows-latest` | the same workflow                       | `1/76` on the starter                                       |
