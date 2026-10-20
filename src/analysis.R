@@ -112,9 +112,9 @@ build_roster <- function(student_names, groups, scores) {
     data.frame(
         name = student_names,
         group = factor(groups, levels = unique(groups)),
-        raw_score = unname(score),
+        raw_score = unname(scores),
         adjusted_score = adjusted,
-        passed = adjusted > 12,
+        passed = adjusted >= 12,
         stringsAsFactors = FALSE
     )
 }
@@ -150,6 +150,7 @@ build_roster <- function(student_names, groups, scores) {
 # compute one mean for each part and return a named vector with no dimensions.
 summarize_roster <- function(roster) {
     fields <- split(roster$adjusted_score, roster$group)
+
     list(
         rows = nrow(roster),
         missing_raw = sum(is.na(roster$raw_score)),
